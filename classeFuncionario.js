@@ -37,3 +37,4 @@ class Funcionario{
         console.log(strApresentacao);
     }
 }
+module.exports = Funcionario;

@@ -1,0 +1,1 @@
+const Funcionario = require('./classeFuncionario');
