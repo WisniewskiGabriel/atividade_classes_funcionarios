@@ -5,11 +5,11 @@ const functions = require('./randomAssets');
 
 console.log("\nIniciando classe: Gerente\n");
 let objGerente = instanciarGerente();
-displayGerente(objGerente,true);
+displayGerente(objGerente,true,true);
 
 console.log("\n\nIniciando classe: Desenvolvedor\n");
 let objDesenvolvedor = instanciarDesenvolvedor();
-displayDesenvolver(objDesenvolvedor,true);
+displayDesenvolver(objDesenvolvedor,true,true);
 
 function instanciarGerente(nome,idade,cargo,departamento){
     if(functions.isNullOrEmpty(nome)){
@@ -45,14 +45,20 @@ function instanciarDesenvolvedor(nome,idade,cargo,linguagem){
     return objDesenvolvedor;
 }
 
-function displayGerente(objGerente,bool_gerenciar){
+function displayGerente(objGerente,bool_trabalhar,bool_gerenciar){
+    if(bool_trabalhar){
+        objGerente.trabalhar();
+    }
     if(bool_gerenciar){
         objGerente.gerenciar();
     }
     concatValores(objGerente);
 }
 
-function displayDesenvolver(objDesenvolvedor,bool_programar){
+function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){
+    if(bool_trabalhar){
+        objDesenvolvedor.trabalhar();
+    }
     if(bool_programar){
         objDesenvolvedor.programar();
     }
