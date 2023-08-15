@@ -13,9 +13,7 @@ let language_list = ['Python','JavaScript','Java','C#','PHP','C++','Ruby','Swift
 'MATLAB','Perl','Objective-C','Shell Scripting (Bash)','Dart','Scala','Lua'];
 
 function isNullOrEmpty(str){
-    return str === null ||
-    str === '' ||
-    str.length === 0;
+    return str === null || str === '' || str === undefined;
 }
 
 function getRandomInt(max) {
@@ -26,10 +24,38 @@ function getCountOfAssets(list){
     return list.length;
 }
 
-function getRandomName(){
-    return name_list[getRandomInt(getCountOfAssets(name_list))];
-}
-
 function getRandomAge(){
     return String(getRandomInt(99));
 }
+
+function getRandomFromList(list){
+    return list[getRandomInt(getCountOfAssets(list))];
+}
+
+function getRandomName(){
+    return getRandomFromList(name_list);
+}
+
+function getRandomJob(){
+    return getRandomFromList(job_list);
+}
+
+function getRandomDepartment(){
+    return getRandomFromList(department_list)
+}
+
+function getRandomLaguage(){
+    return getRandomFromList(language_list);
+}
+
+module.exports = {
+    isNullOrEmpty,
+    getRandomInt,
+    getCountOfAssets,
+    getRandomAge,
+    getRandomFromList,
+    getRandomName,
+    getRandomJob,
+    getRandomDepartment,
+    getRandomLaguage
+};
