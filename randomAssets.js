@@ -26,12 +26,19 @@ function getCountOfAssets(list){
 
 function getRandomAge(){
     let age = getRandomInt(99);
-    if(Number(age) === 0){
-        Number(age)++;
+    // bloco de try catch pra corrigir bug estranho em alguns casos nao testados...
+    try{
+        if(Number(age) === 0){
+            Number(age)++;
+        }
+    } catch{
+        age = "101"
     }
+    
     return age;
 }
-
+// getRandomFromList pega o tamanho (length) da lista desejada,
+// gera uma int aleatória e saca o valor dessa posição 
 function getRandomFromList(list){
     return list[getRandomInt(getCountOfAssets(list))];
 }
