@@ -44,7 +44,7 @@ Para executar o código, você pode utilizar o ambiente Node.js ou um navegador 
 2. Certifique-se de ter o Node.js instalado em seu sistema.
 3. Salve o código em sua máquina.
 4. Abra o terminal e navegue até a pasta contendo o arquivo.
-5. Execute o arquivo JavaScript usando o comando node main.js.
+5. Execute o arquivo JavaScript usando o comando abaixo.
 
 ```
 node .\main.js
