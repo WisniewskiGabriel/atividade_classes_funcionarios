@@ -2,6 +2,11 @@ const Funcionario = require('./classeFuncionario');
 const Gerente = require('./classeGerente');
 const Desenvolvedor = require('./classeDesenvolvedor');
 
+function instanciarGerente(nome,idade,cargo,departamento){
+    let objGerente = new Gerente(nome,idade,cargo,departamento);
+    return objGerente;
+}
+
 function concatValores(obj){
     let str_saida = "";
     let idx = 0;
