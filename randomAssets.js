@@ -29,3 +29,7 @@ function getCountOfAssets(list){
 function getRandomName(){
     return name_list[getRandomInt(getCountOfAssets(name_list))];
 }
+
+function getRandomAge(){
+    return String(getRandomInt(99));
+}
