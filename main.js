@@ -2,7 +2,6 @@ const Funcionario = require('./classeFuncionario');
 const Gerente = require('./classeGerente');
 const Desenvolvedor = require('./classeDesenvolvedor');
 
-
 obj = new Funcionario('a','b','c');
 concatValores(obj);
 
