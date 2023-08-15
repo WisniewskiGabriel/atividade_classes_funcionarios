@@ -20,6 +20,7 @@ class Gerente extends Funcionario{
             console.log("Já está gerenciando");
         }else{
             this._gerenciando = true;
+            //console.log("Gerenciamento iniciado no departamento "+this._departamento);
         }
     }
 }

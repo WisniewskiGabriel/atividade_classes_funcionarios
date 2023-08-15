@@ -20,6 +20,7 @@ class Desenvolvedor extends Funcionario{
             console.log("Já está programando");
         }else{
             this._programando = true;
+            console.log("Iniciou a programação na linguagem "+this._linguagem);
         }
     }
 }

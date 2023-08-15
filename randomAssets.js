@@ -44,7 +44,7 @@ function getRandomDepartment(){
     return getRandomFromList(department_list)
 }
 
-function getRandomLaguage(){
+function getRandomLanguage(){
     return getRandomFromList(language_list);
 }
 
@@ -57,5 +57,5 @@ module.exports = {
     getRandomName,
     getRandomJob,
     getRandomDepartment,
-    getRandomLaguage
+    getRandomLanguage
 };
