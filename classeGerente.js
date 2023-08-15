@@ -22,5 +22,6 @@ class Gerente extends Funcionario{
             this._gerenciando = true;
         }
     }
-
 }
+
+module.exports = Gerente;
