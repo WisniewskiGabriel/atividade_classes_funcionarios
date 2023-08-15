@@ -3,13 +3,19 @@ const Gerente = require('./classeGerente');
 const Desenvolvedor = require('./classeDesenvolvedor');
 const functions = require('./randomAssets');
 
+lineAcross();
+
 console.log("\nIniciando classe: Gerente\n");
 let objGerente = instanciarGerente();
 displayGerente(objGerente,true,true);
 
+lineAcross();
+
 console.log("\n\nIniciando classe: Desenvolvedor\n");
 let objDesenvolvedor = instanciarDesenvolvedor();
 displayDesenvolver(objDesenvolvedor,true,true);
+
+lineAcross();
 
 function instanciarGerente(nome,idade,cargo,departamento){
     if(functions.isNullOrEmpty(nome)){
@@ -76,4 +82,9 @@ function concatValores(obj){
         idx++;
     }
     console.log(str_saida);
+}
+
+function lineAcross(){
+    let lineAcross = "--------------------------------------------"
+    console.log(lineAcross)
 }
