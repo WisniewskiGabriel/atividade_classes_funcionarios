@@ -47,6 +47,7 @@ class Funcionario{
     }
 }
 
+module.exports = Funcionario;
 
 //let teste = new Funcionario('Teste da Silva','25','lobby boy');
 //teste.trabalhar();
