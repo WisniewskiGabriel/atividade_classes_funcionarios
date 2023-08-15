@@ -1,9 +1,9 @@
 class Funcionario{
-    constructor(nome,idade,cargo,trabalhando){
+    constructor(nome,idade,cargo){
         this._nome = nome;
         this._idade = idade;
         this._cargo = cargo;
-        this._trabalhando = trabalhando;
+        this._trabalhando = false;
     }
 
     get nome(){
@@ -38,12 +38,18 @@ class Funcionario{
         console.log(strApresentacao);
     }
 
-    trabalhar(bool){
-        if(this.trabalhando = true && bool){
+    trabalhar(){
+        if(this._trabalhando === true){
             console.log("Já está trabalhando.");
         } else {
-            this.trabalhando = bool;
+            this._trabalhando = true;
         }
     }
 }
-module.exports = Funcionario;
+
+
+//let teste = new Funcionario('Teste da Silva','25','lobby boy');
+//teste.trabalhar();
+//console.log(teste);
+//teste.trabalhar();
+//console.log(teste);
