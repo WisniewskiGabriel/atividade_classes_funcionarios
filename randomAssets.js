@@ -25,7 +25,11 @@ function getCountOfAssets(list){
 }
 
 function getRandomAge(){
-    return String(getRandomInt(99));
+    let age = getRandomInt(99);
+    if(Number(age) === 0){
+        Number(age)++;
+    }
+    return age;
 }
 
 function getRandomFromList(list){
