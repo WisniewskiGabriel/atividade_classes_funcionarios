@@ -1,16 +1,16 @@
-class Funcionario{
+class Funcionario{                                                                          //classe bem feijão com arroz mesmo
     constructor(nome,idade,cargo){
-        this._nome = nome;
-        this._idade = idade;
-        this._cargo = cargo;
+        this._nome = nome;                                                                  //construtor com "_" antes do nome...
+        this._idade = idade;                                                                //... para diferenciar do nome dos...
+        this._cargo = cargo;                                                                //... argumentos
         this._trabalhando = false;
     }
 
-    get nome(){
-        return this._nome;
-    }
-
-    set nome(novoNome){
+    get nome(){                                                                             //getters and...
+        return this._nome;                                                                  //...
+    }                                                                                       //...
+                                                                                            //...
+    set nome(novoNome){                                                                     //... setters
         this._nome = novoNome
     }
 
@@ -30,7 +30,7 @@ class Funcionario{
         this._cargo = novoCargo
     }
 
-    seApresentar(){
+    seApresentar(){                                                                         //esse método simula um funcionário se apresentando
         let strApresentacao =
         "Olá, meu nome é "+this._nome+", "+
         "tenho "+this._idade+" ano"+(Number(this.idade)>1 ? 's' : '')+" "+
@@ -38,8 +38,8 @@ class Funcionario{
         console.log(strApresentacao);
     }
 
-    trabalhar(){
-        if(this._trabalhando === true){
+    trabalhar(){                                                                            //esse aqui só vira true ou avisa se já é true,...
+        if(this._trabalhando === true){                                                     //... tornar false não está previsto
             console.log("Já está trabalhando.");
         } else {
             this._trabalhando = true;
@@ -47,10 +47,4 @@ class Funcionario{
     }
 }
 
-module.exports = Funcionario;
-
-//let teste = new Funcionario('Teste da Silva','25','lobby boy');
-//teste.trabalhar();
-//console.log(teste);
-//teste.trabalhar();
-//console.log(teste);
+module.exports = Funcionario; //exportar classe

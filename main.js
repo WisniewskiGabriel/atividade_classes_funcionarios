@@ -86,18 +86,18 @@ function concatValores(obj){    	                                               
 
         let str_thisVal = obj[prop];                                                //valor da propriedade atribuido a 'str_thisVal'
 
-        let str_thisProp = prop.replace(/_/g,'');                                   //expressão regular para remover o '_' (underline)
+        let str_thisProp = prop.replace(/_/g,'');                                   //expressão regular para remover o '_' (underline)...
+                                                                                    //... ex: "_nome" -> "Nome"
+        str_thisProp = str_thisProp.charAt(0).toUpperCase()+                        //primeiro caractere para maiúsculo e concatena...
+        str_thisProp.slice(1);                                                      //... o restante da string a partir da posição 1
 
-        str_thisProp = str_thisProp.charAt(0).toUpperCase()+                        // primeiro caractere para maiúsculo
-        str_thisProp.slice(1);
+        str_saida+=                                                                 //concatenar a string maior
+        (idx>0?", ":"")+                                                            //if ternário para não adicionar ', ' a primeira...
+        str_thisProp+": "+str_thisVal;                                              //... posição do indíce
 
-        str_saida += (idx>0?", ":"") +
-
-        str_thisProp+": "+str_thisVal;
-
-        idx++;
+        idx++;                                                                      //incrementar o contador
     }
-    console.log(str_saida);
+    console.log(str_saida);                                                         //log apenas da string completa.
 }
 
 function lineAcross(){

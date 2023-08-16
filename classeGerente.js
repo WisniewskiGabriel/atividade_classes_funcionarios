@@ -1,4 +1,4 @@
-const Funcionario = require('./classeFuncionario');
+const Funcionario = require('./classeFuncionario');                                             //esse arquivo inteiro não tem nada de atípico
 
 class Gerente extends Funcionario{
     constructor(nome,idade,cargo,departamento){
