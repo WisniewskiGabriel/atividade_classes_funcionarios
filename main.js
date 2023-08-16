@@ -48,7 +48,7 @@ function instanciarDesenvolvedor(nome,idade,cargo,linguagem){
         linguagem = functions.getRandomLanguage();
     }
     let objDesenvolvedor = new Desenvolvedor(nome,idade,cargo,linguagem);
-    return objDesenvolvedor;
+    return objDesenvolvedor; 
 }
 
 function displayGerente(objGerente,bool_trabalhar,bool_gerenciar){
@@ -59,6 +59,8 @@ function displayGerente(objGerente,bool_trabalhar,bool_gerenciar){
         objGerente.gerenciar();
     }
     concatValores(objGerente);
+    lineAcross();
+    objGerente.seApresentar();
 }
 
 function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){
@@ -69,6 +71,9 @@ function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){
         objDesenvolvedor.programar();
     }
     concatValores(objDesenvolvedor);
+    lineAcross();
+    objDesenvolvedor.seApresentar();
+
 }
 
 function concatValores(obj){
