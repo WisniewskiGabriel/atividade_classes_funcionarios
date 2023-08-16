@@ -52,20 +52,20 @@ function instanciarDesenvolvedor(nome,idade,cargo,linguagem){                   
     return objDesenvolvedor; 
 }
 
-function displayGerente(objGerente,bool_trabalhar,bool_gerenciar){                  //exibe dados do gerente
-    if(bool_trabalhar){                                                             //argumentos bools. definem se tais metodos serão invocados 
+function displayGerente(objGerente,bool_trabalhar,bool_gerenciar){                      //exibe dados do gerente
+    if(bool_trabalhar){                                                                 //argumentos bools. definem se tais metodos serão invocados 
         objGerente.trabalhar();                                                     
     }
     if(bool_gerenciar){
         objGerente.gerenciar();
     }
-    concatValores(objGerente);                                                      //exibe dados de dentro do objeto em str. contatenado...
-    lineAcross();                                                                   //... e propriedades apitalizadas
-    objGerente.seApresentar();                                                      //trabalhar ativo por default
+    concatValores(objGerente);                                                          //exibe dados de dentro do objeto em str. contatenado...
+    lineAcross();                                                                       //... e propriedades apitalizadas
+    objGerente.seApresentar();                                                          //trabalhar ativo por default
 }
 
-function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){        //mesma lógica do displayGerente, porém chamando os...
-    if(bool_trabalhar){                                                             //... métodos exclusivos do Desenvolvedor
+function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){            //mesma lógica do displayGerente, porém chamando os...
+    if(bool_trabalhar){                                                                 //... métodos exclusivos do Desenvolvedor
         objDesenvolvedor.trabalhar();
     }
     if(bool_programar){
@@ -77,27 +77,27 @@ function displayDesenvolver(objDesenvolvedor,bool_trabalhar,bool_programar){    
 
 }
 
-function concatValores(obj){    	                                                //itera as propriedade de um obj. qualquer...
-                                                                                    //... remove o caractere '_' do início...
-    let str_saida = "";                                                             //... e capitaliza a primeira letra
+function concatValores(obj){    	                                                    //itera as propriedade de um obj. qualquer...
+                                                                                        //... remove o caractere '_' do início...
+    let str_saida = "";                                                                 //... e capitaliza a primeira letra
     let idx = 0;
 
     for (let prop in obj){
 
-        let str_thisVal = obj[prop];                                                //valor da propriedade atribuido a 'str_thisVal'
+        let str_thisVal = obj[prop];                                                    //valor da propriedade atribuido a 'str_thisVal'
 
-        let str_thisProp = prop.replace(/_/g,'');                                   //expressão regular para remover o '_' (underline)...
-                                                                                    //... ex: "_nome" -> "Nome"
-        str_thisProp = str_thisProp.charAt(0).toUpperCase()+                        //primeiro caractere para maiúsculo e concatena...
-        str_thisProp.slice(1);                                                      //... o restante da string a partir da posição 1
+        let str_thisProp = prop.replace(/_/g,'');                                       //expressão regular para remover o '_' (underline)...
+                                                                                        //... ex: "_nome" -> "Nome"
+        str_thisProp = str_thisProp.charAt(0).toUpperCase()+                            //primeiro caractere para maiúsculo e concatena...
+        str_thisProp.slice(1);                                                          //... o restante da string a partir da posição 1
 
-        str_saida+=                                                                 //concatenar a string maior
-        (idx>0?", ":"")+                                                            //if ternário para não adicionar ', ' a primeira...
-        str_thisProp+": "+str_thisVal;                                              //... posição do indíce
+        str_saida+=                                                                     //concatenar a string maior
+        (idx>0?", ":"")+                                                                //if ternário para não adicionar ', ' a primeira...
+        str_thisProp+": "+str_thisVal;                                                  //... posição do indíce
 
-        idx++;                                                                      //incrementar o contador
+        idx++;                                                                          //incrementar o contador
     }
-    console.log(str_saida);                                                         //log apenas da string completa.
+    console.log(str_saida);                                                             //log apenas da string completa.
 }
 
 function lineAcross(){
