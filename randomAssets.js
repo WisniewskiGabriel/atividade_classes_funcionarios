@@ -12,54 +12,52 @@ let department_list = ['Desenvolvimento de Software','Design e Experiência do U
 let language_list = ['Python','JavaScript','Java','C#','PHP','C++','Ruby','Swift','TypeScript','Go','Kotlin','Rust','R',
 'MATLAB','Perl','Objective-C','Shell Scripting (Bash)','Dart','Scala','Lua'];
 
+// ^---^ valores de arrays iniciados ^---^
+
+
 function isNullOrEmpty(str){
-    return str === null || str === '' || str === undefined;
+    return str === null || str === '' || str === undefined;                     //checa se str é nula ou vazia
 }
 
-function getRandomInt(max) {
-    return Math.floor(Math.random()*(max-1+1));
+function getRandomInt(max) {                                                    //gera número aleatório com range 0 a valor máx.
+    return Math.floor(Math.random()*max);
 }
 
-function getCountOfAssets(list){
+function getCountOfAssets(list){                                                //recebe array e retorna quantidade de itens dentro
     return list.length;
 }
 
-function getRandomAge(){
+function getRandomAge(){                                                        //gera uma idade aleatória de 1 a 99
     let age = getRandomInt(99);
-    // bloco de try catch pra corrigir bug estranho em alguns casos nao testados...
-    try{
-        if(Number(age) === 0){
-            Number(age)++;
-        }
-    } catch{
-        age = "101"
+
+    if(Number(age)===0){                                                        //caso random for = 0, inicia com valor 1,...
+        age = 1;                                                                //... sendo assim, 1 é o valor mais provável
     }
+
+    return String(age);
+}
+function getRandomFromList(list){                                               //getRandomFromList pega o tamanho (length) da lista desejada,...
+    return list[getRandomInt(getCountOfAssets(list))];                          //... gera uma int aleatória e saca o valor dessa posição
+}
+
+function getRandomName(){                                                       //... apenas
+    return getRandomFromList(name_list);                                        //...
+}                                                                               //... pegam
+                                                                                //...
+function getRandomJob(){                                                        //... valores
+    return getRandomFromList(job_list);                                         //...
+}                                                                               //... aleatórios
+                                                                                //...
+function getRandomDepartment(){                                                 //... a partir
+    return getRandomFromList(department_list)                                   //...
+}                                                                               //... dos
+                                                                                //...
+function getRandomLanguage(){                                                   //... arrays
     
-    return age;
-}
-// getRandomFromList pega o tamanho (length) da lista desejada,
-// gera uma int aleatória e saca o valor dessa posição 
-function getRandomFromList(list){
-    return list[getRandomInt(getCountOfAssets(list))];
-}
-
-function getRandomName(){
-    return getRandomFromList(name_list);
-}
-
-function getRandomJob(){
-    return getRandomFromList(job_list);
-}
-
-function getRandomDepartment(){
-    return getRandomFromList(department_list)
-}
-
-function getRandomLanguage(){
     return getRandomFromList(language_list);
 }
 
-module.exports = {
+module.exports = {                                                              //exportar todas essas funções
     isNullOrEmpty,
     getRandomInt,
     getCountOfAssets,

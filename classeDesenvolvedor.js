@@ -1,4 +1,4 @@
-const Funcionario = require('./classeFuncionario');
+const Funcionario = require('./classeFuncionario');                                    //esse arquivo também não tem nada de interessanteeee
 
 class Desenvolvedor extends Funcionario{
     constructor(nome,idade,cargo,linguagem){
